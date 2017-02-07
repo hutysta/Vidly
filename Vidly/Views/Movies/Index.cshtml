@@ -7,10 +7,25 @@
 <h2>Movies</h2>
 
 
+
+<table class="table table-bordered table-hover">
+    <thead>
+    <tr>
+        <th>Name</th>
+    </tr>
+    </thead>
+    <tbody>
+   
+        @foreach (var movie in Model.Movies)
+        {
+            <tr>
+                <td>@Html.ActionLink(@movie.Name, "Details", "Movies", new {id = movie.Id})</td>
+                
+            </tr>
+        }
+    </tbody>
+</table>
 <ul>
-    @foreach(var movie in Model.Movies)
-    {
-        <li>@movie.Name</li>
-    }
+    
 </ul>
 

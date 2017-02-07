@@ -235,9 +235,26 @@
     <Compile Include="Migrations\201702071839276_PopulateMembershipTypesAgain.Designer.cs">
       <DependentUpon>201702071839276_PopulateMembershipTypesAgain.cs</DependentUpon>
     </Compile>
+    <Compile Include="Migrations\201702071856155_AddBirthDateToCustomer.cs" />
+    <Compile Include="Migrations\201702071856155_AddBirthDateToCustomer.Designer.cs">
+      <DependentUpon>201702071856155_AddBirthDateToCustomer.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201702071926424_AddGenreTable.cs" />
+    <Compile Include="Migrations\201702071926424_AddGenreTable.Designer.cs">
+      <DependentUpon>201702071926424_AddGenreTable.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201702071931282_PopulateGenre.cs" />
+    <Compile Include="Migrations\201702071931282_PopulateGenre.Designer.cs">
+      <DependentUpon>201702071931282_PopulateGenre.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201702071948260_AddGenreTable1.cs" />
+    <Compile Include="Migrations\201702071948260_AddGenreTable1.Designer.cs">
+      <DependentUpon>201702071948260_AddGenreTable1.cs</DependentUpon>
+    </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Models\AccountViewModels.cs" />
     <Compile Include="Models\Customer.cs" />
+    <Compile Include="Models\Genre.cs" />
     <Compile Include="Models\IdentityModels.cs" />
     <Compile Include="Models\ManageViewModels.cs" />
     <Compile Include="Models\MemberShipType.cs" />
@@ -314,6 +331,7 @@
     <Content Include="Views\Customers\Index.cshtml" />
     <Content Include="Views\Customers\Details.cshtml" />
     <Content Include="Views\Movies\Index.cshtml" />
+    <Content Include="Views\Movies\Details.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
@@ -350,6 +368,18 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Migrations\201702071839276_PopulateMembershipTypesAgain.resx">
       <DependentUpon>201702071839276_PopulateMembershipTypesAgain.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201702071856155_AddBirthDateToCustomer.resx">
+      <DependentUpon>201702071856155_AddBirthDateToCustomer.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201702071926424_AddGenreTable.resx">
+      <DependentUpon>201702071926424_AddGenreTable.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201702071931282_PopulateGenre.resx">
+      <DependentUpon>201702071931282_PopulateGenre.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201702071948260_AddGenreTable1.resx">
+      <DependentUpon>201702071948260_AddGenreTable1.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <PropertyGroup>
