@@ -11,7 +11,7 @@ namespace Vidly.Controllers
 {
     public class MoviesController:Controller
     {
-        public ApplicationDbContext _context { get; set; }
+        private ApplicationDbContext _context;
 
         public MoviesController()
         {
@@ -21,6 +21,11 @@ namespace Vidly.Controllers
         protected override void Dispose(bool disposing)
         {
             _context.Dispose();
+        }
+
+        public ActionResult New()
+        {
+            return View();
         }
 
         // GET: Movies/Random
