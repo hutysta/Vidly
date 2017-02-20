@@ -6,6 +6,7 @@ using System.Web.Mvc;
 using Vidly.Models;
 using Vidly.ViewModel;
 using System.Data.Entity;
+using System.Data.SqlClient;
 
 namespace Vidly.Controllers
 {
@@ -25,7 +26,12 @@ namespace Vidly.Controllers
 
         public ActionResult New()
         {
-            return View();
+            var genres = _context.Genres.ToList();
+            var viewModel = new NewMovieViewModel
+            {
+                Genres = genres
+            };
+            return View(viewModel);
         }
 
         // GET: Movies/Random
@@ -69,9 +75,24 @@ namespace Vidly.Controllers
             return View(movie);
         }
 
-        
+        [HttpPost]
+        public ActionResult Create(Movie movie)
+        {
+            movie.DateAdded=DateTime.Now;
+            _context.Movies.Add(movie);
 
-        
+            try
+            {
+                _context.SaveChanges();
 
+            }
+            catch (Exception e)
+            {
+                Console.WriteLine(e);
+                throw;
+            }
+
+            return RedirectToAction("Index", "Movies");
+        }
     }
 }
